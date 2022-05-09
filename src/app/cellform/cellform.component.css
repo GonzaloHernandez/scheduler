@@ -1,0 +1,14 @@
+button {
+    width: 100%;
+    height: 100%;
+    border: 0px solid;
+    cursor: pointer;
+}
+
+.color-selected {
+    background-color: darksalmon;
+}
+
+.color-noselected {
+    background-color: floralwhite;
+}

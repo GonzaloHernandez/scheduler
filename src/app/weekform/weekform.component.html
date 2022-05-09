@@ -1,0 +1,22 @@
+<table>
+    <tr>
+        <th></th>
+        <th *ngFor="let day of days, let i = index"> 
+            <app-labelform [text]="day.short"
+            [type]="1"
+            [position]="i">
+            </app-labelform>
+        </th>
+    </tr>
+    <tr *ngFor="let in of counter(15); let i = index">
+        <td>
+            <app-labelform 
+            [text]="(i<6 ? i+7 : i-12+7).toString() + ' - ' +(i<5?i+8:i-12+8).toString()"
+            [type]="2"
+            [position]="i">
+            </app-labelform>
+            <!--{{i<6 ? i+7 : i-12+7}} - {{i<5?i+8:i-12+8}} -->
+        </td>
+        <td *ngFor="let in of counter(7)"><app-cellform></app-cellform></td>
+    </tr>
+</table>
